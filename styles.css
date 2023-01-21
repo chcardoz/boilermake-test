@@ -70,23 +70,33 @@ body {
     font-size: 20pt;
 }
 
-#remote-video{
+.remote-container {
     top: 2rem;
-    height: 100%;
-    width: 100%;
+    height: calc((9/16)*100vw);
+    width: 100vw;
     left: 0;
-    object-fit: cover;
     background-color: lightgray;
     position: absolute;
+}
+
+#remote-video {
+    display: none;
+    height: inherit;
+    width: inherit;
+}
+
+#remote-mediapipes-output {
+    height: inherit;
+    width: inherit;
 }
 
 #local-video{
     bottom: 5px;
     width: 320px;
-    object-fit: cover;
     height: 240px;
     z-index: 1;
     right: 5px;
+    object-fit: cover;
     background-color: #444444;
     position: fixed;
     box-shadow: 2px 7px 96px 30px rgba(0,0,0,0.75);
